@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/c0f68a5c-d6ce-4142-9383-e6457d7da5e8/resourceGroups/olt-apps/providers/Microsoft.Web/sites/helloazurewolrd",
+    "appService.deploySubpath": "."
+}
