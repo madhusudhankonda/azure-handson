@@ -78,7 +78,7 @@ Executing this command would create the required resoruces and most importantly 
 Now that we've managed to create the App, let's check it out.
 
 On your WebApp (in Portal, you should find a "Default domain" (on the right hand side) for our application, as you can see in this image:
-![image](https://user-images.githubusercontent.com/1698230/224291089-292404c8-68b6-4551-8fb5-6181fe2b6b65.png)
+![image](https://user-images.githubusercontent.com/1698230/224291687-1be56706-4423-41c2-b845-57e14686b9e0.png)
 
 Clicking this link will take our newly deployed App!
 
