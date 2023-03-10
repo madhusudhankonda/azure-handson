@@ -67,6 +67,48 @@ We provided an "UbuntuLTS as the image in the above script. The following are th
 ...
 ```
 
+## Check the configuration of the VM
+
+You can find various bits of configuration about this VM on Portal. Let's open a port 80 on this machine:
+
+```
+az vm open-port --port 80 --resource-group "rg-vm-cli-group" --name "my-sample-vm"
+```
+
+## Installing a NGNIX webserver using Portal
+
+The VM that deployed was pretty barebones. Let's install Ngnix webserver on it using "Run Command". 
+
+On the VM's menu, head over to "Run Command" under "Operations". Input the following command:
+
+```
+sudo apt-get update
+```
+
+This command will update the softwared on the VM. 
+
+Once this is done, execute this command:
+
+```
+sudo apt-get install -y nginx
+```
+This command will execute the nginx webserver on the VM.
+
+Once the installation is complete, visit the IP address of the VM to access the Nginix server
+
+## Installing the NGINX server using CLI
+
+We can install software by executing `run-command` command on the `vm` service. The following command would run the installation for us:
+
+```
+az vm run-command invoke  \
+  --resource-group "rg-vm-cli-group" \
+  --name "my-sample-vm" \
+  --command-id RunShellScript \
+  --scripts "sudo apt-get update && sudo apt-get install -y nginx"
+```
+
+Accessing the IP address should show you the Nginx welcome page!
 
 # Azure App Service
 
