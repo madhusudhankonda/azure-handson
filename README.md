@@ -43,4 +43,37 @@ Once moved to azure-handson-python folder, issue the following command without t
 
 `az webapp up`
 
-This command would create all the required configuration for our Python App. It would take a minute or two to get this resource created. 
+This command would create all the required configuration for our Python App. It would take a minute or two to get this resource created. You should see an output something like this:
+
+```
+➜  azure-handson-python git:(main) az webapp up
+The webapp '.....' doesn't exist
+Creating Resource group '....' ...
+Resource group creation complete
+Creating AppServicePlan '....' ...
+Creating webapp '....' ...
+Configuring default logging for the app, if not already enabled
+Creating zip with contents of dir /Users/mkonda/DEV/OLT/AZURE_HANDSON/azure-handson-python ...
+Getting scm site credentials for zip deployment
+Starting zip deployment. This operation can take a while to complete ...
+Deployment endpoint responded with status code 202
+You can launch the app at http://......azurewebsites.net
+Setting 'az webapp up' default arguments for current directory. Manage defaults with 'az configure --scope local'
+--resource-group/-g default: xxxxxxxxx_asp_1869
+--sku default: P1V2
+--plan/-p default: xxxxxxxxx_asp_1869
+--location/-l default: eastus
+--name/-n default: vxxxxx-xxxxxx
+{
+  "URL": "http://xxxxx-xxxxxx.azurewebsites.net",
+  "appserviceplan": "xxxxxxxxx_asp_1869",
+  "location": "eastus",
+  "name": "xxxxx-xxxxxx",
+  "os": "Linux",
+  "resourcegroup": "xxxxxxxxx_asp_1869",
+  "runtime_version": "python|3.10",
+  "runtime_version_detected": "-",
+  "sku": "PREMIUMV2",
+  "src_path": "//Users//mkonda//DEV//OLT//AZURE_HANDSON//azure-handson-python"
+}
+```
