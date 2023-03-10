@@ -43,7 +43,30 @@ So let's create the resource group first:
 az group create --name "rg-vm-cli-group" --location "uksouth" 
 ```
 
-Executing this command should create the required resource group. 
+Executing this command will create a required resource group for us with the "rg-vm-cli-group" name. 
+
+> If you wish to change the location, but wouldn't know the short name for your location, exeucte the following command `az account list-locations -o table` which brings back all the geo locations and their shortnames in a table format.
+
+Now that we have our resource group created (you can issue `az group list` to fetch all the available resource groups), let's create a VM.
+
+We use `az vm create` command to create our VM - this command accepts a few options such as resoruce group, name, ip address and others. Let's create ours with just the name, resource group and an image:
+
+```
+az vm create --resource-group "rg-vm-cli-group" --name "my-sample-vm" --image "UbuntuLTS"
+```
+We provided an "UbuntuLTS as the image in the above script. The following are the common list of images available:
+
+```
+...
+'CentOS'
+'Debian'
+'UbuntuLTS'
+'Win2022Datacenter'
+'Win2022AzureEditionCore'
+'Win2019Datacenter'
+...
+```
+
 
 # Azure App Service
 
