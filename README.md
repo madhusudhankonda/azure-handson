@@ -1,7 +1,49 @@
-# azure-handson
-Azure handson 3 week Online Live Training for O'Reilly
+# Azure Handson 3 Week Online Training 
+This notes here corresponds to the Azure handson 3 week Online Live Training for O'Reilly that I regularly teach. Though I try to present as much info as possible here, I do suggest you to join the course to follow along my instructions on bits that I coudln't manage to get them documented here. 
+
+# Azure CLI
+
+To use the Azure CLI client, we have two options - one is to use our own terminal (my instructions are Linux/MacOS based Operation Systems - please check out the official documentation for Windows) and the other is to use CloudShell. 
+
+## Terminal
+
+Open the terminal on our local Linux/MacOS machine. First thing to do is to login to our Azure account. We can issue `az login` at the command line that'll get the login sorted provided we already logged in via browser earlier on. If you havne't logged in to portal, do so by visiting [Azure Portal](https://portal.azure.com) and logging into it. 
+
+Once you are in Portal, head over to the terminal and issue the following command:
+```
+az login
+```
+
+This will automatically opens up a webbrowser asking you to pick an account, as shown here:
+```
+A web browser has been opened at https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize. Please continue the login in the web browser. If no web browser is available or if the web browser fails to open, use device code flow with `az login --use-device-code`.
+```
+
+On the opened browser's tab, pick the email/account you've used to login to the portal earlier. It would authenticate you and let you in on the cli (you should see a JSON response with few details of your account).
+
+## Cloud Shell
+
+Opening a Cloud Shell usually associates our login credentials. If not, do refer to Azure Power Shell documenation. 
 
 # Azure Virtual Machines
+
+Azure Virtual machines can be created multiple ways - we look at couple of ways here - via Portal and Azure CLI.
+
+## Creating a VM using Portal
+
+Follow the class to perform actions for creating the VM via Portal
+
+## Creating a VM using CLI
+
+The Azure CLI can be used to create a VM of our choice. It's a two step process - first we need to create a resource group (if not already exists) and then create a VM using the `az vm create` command.
+
+So let's create the resource group first:
+
+```
+az group create --name "rg-vm-cli-group" --location "uksouth" 
+```
+
+Executing this command should create the required resource group. 
 
 # Azure App Service
 
