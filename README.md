@@ -50,19 +50,7 @@ This command would create all the required configuration for our Python App. It 
 The webapp '.....' doesn't exist
 Creating Resource group '....' ...
 Resource group creation complete
-Creating AppServicePlan '....' ...
-Creating webapp '....' ...
-Configuring default logging for the app, if not already enabled
-Creating zip with contents of dir /Users/mkonda/DEV/OLT/AZURE_HANDSON/azure-handson-python ...
-Getting scm site credentials for zip deployment
-Starting zip deployment. This operation can take a while to complete ...
-Deployment endpoint responded with status code 202
-You can launch the app at http://......azurewebsites.net
-Setting 'az webapp up' default arguments for current directory. Manage defaults with 'az configure --scope local'
---resource-group/-g default: xxxxxxxxx_asp_1869
---sku default: P1V2
---plan/-p default: xxxxxxxxx_asp_1869
---location/-l default: eastus
+...
 --name/-n default: vxxxxx-xxxxxx
 {
   "URL": "http://xxxxx-xxxxxx.azurewebsites.net",
@@ -77,3 +65,20 @@ Setting 'az webapp up' default arguments for current directory. Manage defaults 
   "src_path": "//Users//mkonda//DEV//OLT//AZURE_HANDSON//azure-handson-python"
 }
 ```
+
+As you can see, the Python App was created for us with sensible defaults (note that Azure chose Premium size plan). We can instead provide our own details. The following command is an updated command with custom details:
+
+```
+az webapp up --name olt-webapps-test-123 --sku B1 --location eastus --resource-group rg-olt-apps-123
+```
+Executing this command would create the required resoruces and most importantly the Python app will be deployed and ready to be accessed.
+
+## Access the Python App
+
+Now that we've managed to create the App, let's check it out.
+
+On your WebApp (in Portal, you should find a "Default domain" (on the right hand side) for our application, as you can see in this image:
+![image](https://user-images.githubusercontent.com/1698230/224291089-292404c8-68b6-4551-8fb5-6181fe2b6b65.png)
+
+Clicking this link will take our newly deployed App!
+
