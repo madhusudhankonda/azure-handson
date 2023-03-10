@@ -5,7 +5,7 @@ This notes here corresponds to the Azure handson 3 week Online Live Training for
 
 To use the Azure CLI client, we have two options - one is to use our own terminal (my instructions are Linux/MacOS based Operation Systems - please check out the official documentation for Windows) and the other is to use CloudShell. 
 
-## Terminal
+## Terminal
 
 Open the terminal on our local Linux/MacOS machine. First thing to do is to login to our Azure account. We can issue `az login` at the command line that'll get the login sorted provided we already logged in via browser earlier on. If you havne't logged in to portal, do so by visiting [Azure Portal](https://portal.azure.com) and logging into it. 
 
