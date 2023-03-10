@@ -72,6 +72,8 @@ As you can see, the Python App was created for us with sensible defaults (note t
 az webapp up --name olt-webapps-test-123 --sku B1 --location eastus --resource-group rg-olt-apps-123
 ```
 Executing this command would create the required resoruces and most importantly the Python app will be deployed and ready to be accessed.
+> Check it out this document for various command line options for webapp command, including various SKUs: [Azure WebApp CLI reference]https://learn.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest#az-webapp-up
+
 
 ## Access the Python App
 
