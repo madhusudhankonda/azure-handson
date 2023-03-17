@@ -293,4 +293,4 @@ Let's create a new spec by click on the "Create template spec" menu item. This w
 
 In the Edit Template tab, code your spec or simply paste and modify your existing spec. Once the filling up of the spec definition is completed, click on the Create button to get this template instantiated. The template is ready to be deployed once the validation is completed.
 
-You can deploy it by clicking on the template itself which leads to a details page with "Deploy" button enabled. Clicking the Deploy button will let your resource deploye!
+You can deploy it by clicking on the template itself which leads to a details page with "Deploy" button enabled. Clicking the Deploy button will let your resource deployed!
