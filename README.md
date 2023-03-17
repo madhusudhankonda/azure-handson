@@ -191,6 +191,14 @@ On your WebApp (in Portal, you should find a "Default domain" (on the right hand
 
 Clicking this link will take our newly deployed App!
 
+## Access the NodeJS app
+
+In this example, we would like to create a simple WebServer using NodeJS and get it deployed to a newly created webapp. The source code for this NodeJS app is available in [azure-handson-node](https://github.com/madhusudhankonda/azure-handson-node) repository.
+
+We can deploy the WebApp using Azure Portal or use CLI. Follow the steps outlined in the above sections to do this. Don't forget to add the deployment section and link it to the repository (fork the above repo and create your own) that consists of your code. 
+
+##############################
+
 # ARM Templates
 
 Templates help code and version our infrascture - this falls in infrastucture-as-code (IAC) category model. The idea is to create a JSON file with appropriate schema, version and required resources, get it deployed by using Azure CLI or PowerShell.
