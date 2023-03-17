@@ -237,3 +237,6 @@ az deployment group create \
 
 Running this command will get the resource group created by deploying the template. 
 
+> The sample template file is available here in my [azure-handson](https://github.com/madhusudhankonda/azure-handson/blob/main/arm-templates/new-resource-template.json) repo.
+
+
