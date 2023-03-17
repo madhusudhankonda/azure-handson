@@ -214,10 +214,19 @@ The following json file is the one that creates a sample resource group:
     "outputs": {}
 }
 ```
+As you can see, the template file has a schema, version, variables, rosources and outputs. 
 
 > When you create any resource via Portal, at the final step before creating, Portal provides a chance to download the template for that file - this template consists of relevant instructions to Azure Resource Manager to execute those instructions, as shown in the following image:
 
 <img width="540" alt="image" src="https://user-images.githubusercontent.com/1698230/225843770-60321bf4-cd02-4ea0-9603-87e50ec17d97.png">
+
+## Templates with parameters
+
+The above template has hard coded values such as `location` and `name` in the template itself. While this is permissable, not extensible. 
+
+We can instead enhance the template file by providing the parameters. The [no-params-file](https://github.com/madhusudhankonda/azure-handson/blob/main/arm-templates/new-resource-no-params.json) is available in the repository for your reference.
+
+Check the next section how we can pass the parameters to CLI
 
 ## ARM Templates Editor
 
@@ -232,11 +241,15 @@ Once login was successful, issue the following command to get your resoruce temp
 az deployment group create \
   --name my-arm-template-rg \
   --resource-group olt-arm \
-  --template-file new-resource-template.json
+  --template-file new-resource-template.json \
+  --location "southuk"
+  --name "my-new-rg"
 ```
 
-Running this command will get the resource group created by deploying the template. 
+Running this command will get the resource group created by deploying the template. The parameters are passed in via the approprate options like `--location` and `--name`. 
 
 > The sample template file is available here in my [azure-handson](https://github.com/madhusudhankonda/azure-handson/blob/main/arm-templates/new-resource-template.json) repo.
+
+
 
 
