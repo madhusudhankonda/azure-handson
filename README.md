@@ -195,7 +195,15 @@ Clicking this link will take our newly deployed App!
 
 In this example, we would like to create a simple WebServer using NodeJS and get it deployed to a newly created webapp. The source code for this NodeJS app is available in [azure-handson-node](https://github.com/madhusudhankonda/azure-handson-node) repository.
 
-We can deploy the WebApp using Azure Portal or use CLI. Follow the steps outlined in the above sections to do this. Don't forget to add the deployment section and link it to the repository (fork the above repo and create your own) that consists of your code. 
+We can deploy the WebApp using Azure Portal or use CLI. Follow the steps outlined in the above sections to do this. Don't forget to add the deployment section and link it to the repository (fork the above repo and create your own) that consists of your code. This is shown in the figure below:
+![image](https://user-images.githubusercontent.com/1698230/225875937-61d68cda-30c6-4ba5-b272-e80040c47cb2.png)
+
+> Link your repository to the WebApp for continuous deployment
+
+You can also use your local Git should you wish to deploy from your local machine, in addition to other options as shown in the image below:
+![image](https://user-images.githubusercontent.com/1698230/225876359-a1c8c75f-a85e-43eb-902d-7500bc0e45c4.png)
+
+You can link/unlink the code repository by visiting the WebApp and navigating to Deployment -> Deployment Center section. 
 
 ##############################
 
@@ -258,6 +266,31 @@ Running this command will get the resource group created by deploying the templa
 
 > The sample template file is available here in my [azure-handson](https://github.com/madhusudhankonda/azure-handson/blob/main/arm-templates/new-resource-template.json) repo.
 
+## Template Library
 
+> Templates will be deprecated by 2025 in favour of Template Specs - I'm covering both here for your convenience.
 
+### Templates
 
+Azure Portal provies a "Templates" feature (preview feature, mind you!) that you would be able to create and manage your templates.
+
+Search for "Templates" in the site search bar - select Templates feature. You'd be navigated to Templates home. 
+
+Click on the Create button to get the Template created - provide a name and description. In the ARM Template tab, provide the JSON for your resource creation (copy the resource that we had created using the json shown earlier on). 
+
+Once you save this, your templates gets added to the Template library. 
+
+You can deploy by clicking on that template which leads you to a screen where you can click on Deploy button to get this resource template executed. 
+![image](https://user-images.githubusercontent.com/1698230/225879834-54e5c656-1d71-4418-92eb-30b8eda0ac33.png)
+
+Click on the Create button to get the Template created - provide a name and description. In the ARM Template tab, provide the JSON for your resource creation (copy the resource that we had created using the json shown earlier on). 
+
+### Template Specs
+
+Searching for "Template Specs" in the site search bar will lead you to the Template Specs service. This service allows you to import already created template (you may have downloaded during your resource creation!) or create a new one. 
+
+Let's create a new spec by click on the "Create template spec" menu item. This will lead us into a similar form where we were using for creating various resources. Provide the necessary (self-explanatory) details here and go foward to the "Edit template" tab. 
+
+In the Edit Template tab, code your spec or simply paste and modify your existing spec. Once the filling up of the spec definition is completed, click on the Create button to get this template instantiated. The template is ready to be deployed once the validation is completed.
+
+You can deploy it by clicking on the template itself which leads to a details page with "Deploy" button enabled. Clicking the Deploy button will let your resource deploye!
