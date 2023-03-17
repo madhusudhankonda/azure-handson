@@ -191,3 +191,49 @@ On your WebApp (in Portal, you should find a "Default domain" (on the right hand
 
 Clicking this link will take our newly deployed App!
 
+# ARM Templates
+
+Templates help code and version our infrascture - this falls in infrastucture-as-code (IAC) category model. The idea is to create a JSON file with appropriate schema, version and required resources, get it deployed by using Azure CLI or PowerShell.
+
+The following json file is the one that creates a sample resource group:
+
+```
+{
+    "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentTemplate.json#",
+    "contentVersion": "1.0.0.1",
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Resources/resourceGroups",
+            "apiVersion": "2018-05-01",
+            "location": "southuk",
+            "name": "rg-arm",
+            "properties": {}
+        }
+    ],
+    "outputs": {}
+}
+```
+
+> When you create any resource via Portal, at the final step before creating, Portal provides a chance to download the template for that file - this template consists of relevant instructions to Azure Resource Manager to execute those instructions, as shown in the following image:
+
+<img width="540" alt="image" src="https://user-images.githubusercontent.com/1698230/225843770-60321bf4-cd02-4ea0-9603-87e50ec17d97.png">
+
+## ARM Templates Editor
+
+You can use any text editior for creating your tempaltes.I find Visual Studio Code with its Azure Resoruce Manageter Templates extension helps here a lot if you are a fan of VSC. Search and install the ARM templates extension in your VSC:
+<img width="688" alt="image" src="https://user-images.githubusercontent.com/1698230/225844555-a11c3ff2-0cff-40da-b686-7d521c1a522b.png">
+
+When your template is ready, go to the integrated terminal from VSC or even your own terminal and deploy the template (make sure you are logged in. If not login by invoking `az login` command).
+
+Once login was successful, issue the following command to get your resoruce template deployed to Azure (the `new-resource-template.json` is your template file - make sure you provide the correct path of the file):
+
+```
+az deployment group create \
+  --name my-arm-template-rg \
+  --resource-group olt-arm \
+  --template-file new-resource-template.json
+```
+
+Running this command will get the resource group created by deploying the template. 
+
