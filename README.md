@@ -25,6 +25,12 @@ On the opened browser's tab, pick the email/account you've used to login to the 
 
 Opening a Cloud Shell usually associates our login credentials. If not, do refer to Azure Power Shell documenation. 
 
+```
+#########################################################
+############# Azure Virtual Machines ####################
+#########################################################
+```
+
 # Azure Virtual Machines
 
 Azure Virtual machines can be created multiple ways - we look at couple of ways here - via Portal and Azure CLI.
@@ -109,6 +115,12 @@ az vm run-command invoke  \
 ```
 
 Accessing the IP address should show you the Nginx welcome page!
+
+```
+#########################################################
+############# Azure App Service #########################
+#########################################################
+```
 
 # Azure App Service
 
@@ -205,7 +217,19 @@ You can also use your local Git should you wish to deploy from your local machin
 
 You can link/unlink the code repository by visiting the WebApp and navigating to Deployment -> Deployment Center section. 
 
-##############################
+## App Service for Docker App
+
+A docker based containerised app can be deployed to the app service too. 
+
+When creating a WebApp, choose the Docker as your source code repo, as shown in the image below:
+
+![image](https://user-images.githubusercontent.com/1698230/225887970-767a50e8-7778-4ca5-863e-12a18eb4c638.png)
+
+```
+#########################################################
+############# Azure ARM Templates #######################
+#########################################################
+```
 
 # ARM Templates
 
